@@ -52,7 +52,7 @@ body {
 
 .logo-icon > div {
   position: relative;
-  top: 1px;
+  /*top: 1px;*/
 }
 
 @-webkit-keyframes rotate {
