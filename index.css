@@ -21,3 +21,8 @@ body {
  background: #212935; 
  color: #FFF;
 }
+
+.logo-icon {
+  display: inline-block;
+  position: relative;
+}
