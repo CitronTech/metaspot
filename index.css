@@ -28,6 +28,7 @@ body {
 
 .logo-icon {
   display: inline-block;
+  max-height: 22px;
 
   -webkit-animation-name: rotate; 
   -webkit-animation-duration: 5s; 
