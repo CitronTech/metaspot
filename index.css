@@ -22,6 +22,10 @@ body {
  color: #FFF;
 }
 
+.logo {
+  font-size: 20px;  
+}
+
 .logo-icon {
   display: inline-block;
   position: relative;
