@@ -28,28 +28,31 @@ body {
 
 .logo-icon {
   display: inline-block;
-  position: relative;
-  top: 1px;
-  
+
   -webkit-animation-name: rotate; 
-  -webkit-animation-duration: 0.5s; 
+  -webkit-animation-duration: 2s; 
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
   
   -moz-animation-name: rotate; 
-  -moz-animation-duration: 0.5s; 
+  -moz-animation-duration: 2s; 
   -moz-animation-iteration-count: infinite;
   -moz-animation-timing-function: linear;
   
   -o-animation-name: rotate; 
-  -o-animation-duration: 0.5s; 
+  -o-animation-duration: 2s; 
   -o-animation-iteration-count: infinite;
   -o-animation-timing-function: linear;
   
   animation-name: rotate; 
-  animation-duration: 0.5s; 
+  animation-duration: 2s; 
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+}
+
+.logo-icon > div {
+  position: relative;
+  top: 1px;
 }
 
 @-webkit-keyframes rotate {
