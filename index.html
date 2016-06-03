@@ -8,7 +8,7 @@
   <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/metaspot/index.css" type="text/css" />
   <link rel="stylesheet" href="/metaspot/resources/linecons.css" type="text/css" />
-  <script src="https://cdn.jsdelivr.net/fingerprintjs2/<VERSION>/fingerprint2.min.js"></script>
+  <script src="https://cdnjs.com/libraries/fingerprintjs2"></script>
   <script type="text/javascript" src="https://rawgit.com/CitronTech/metaspot/master/build/metaspot.bundle.js"></script>
   <script src="https://sdk.amazonaws.com/js/aws-sdk-2.3.17.min.js"></script>
   <script>
@@ -21,8 +21,6 @@
       var accessKeyId = AWS.config.credentials.accessKeyId;
       var secretAccessKey = AWS.config.credentials.secretAccessKey;
       var sessionToken = AWS.config.credentials.sessionToken;
-      
-      console.log(sessionToken)
       
       new Fingerprint2().get(function(result, components){
         console.log(result); //a hash, representing your device fingerprint
