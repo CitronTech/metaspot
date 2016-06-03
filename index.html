@@ -9,6 +9,13 @@
   <link rel="stylesheet" href="/metaspot/index.css" type="text/css" />
   <link rel="stylesheet" href="/metaspot/resources/linecons.css" type="text/css" />
   <script type="text/javascript" src="https://rawgit.com/CitronTech/metaspot/master/build/metaspot.bundle.js"></script>
+  <script src="https://sdk.amazonaws.com/js/aws-sdk-2.3.17.min.js"></script>
+  <script>
+    AWS.config.region = 'us-east-1';
+    AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+        IdentityPoolId: 'us-east-1:4346742a-8a15-4caa-92be-14eb7f5d2995',
+    });
+  </script>
 </head>
 <body>
   <div class="logo">
