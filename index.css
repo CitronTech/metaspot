@@ -24,19 +24,19 @@ body {
 
 body .top {
   position: absolute;
-  top: 0; bottom: 0;
+  top: 0; right: 0; bottom: 0; left: 0;
   overflow-y: auto;
   border-left: solid 1px #fff;
   border-right: solid 1px #fff;
 }
 
 .logo {
-  font-size: 20px;  
+  font-size: 32px;  
 }
 
 .logo-icon {
   display: inline-block;
-  max-height: 22px;
+  max-height: 34px;
 
   -webkit-animation-name: rotate; 
   -webkit-animation-duration: 5s; 
