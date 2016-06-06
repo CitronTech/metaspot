@@ -3,7 +3,7 @@ html, body {
   margin: 0;
   padding: 0;
   font-size: 12px;
-  font-family: 'Roboto', helvetica, arial, sans-serif;
+  font-family: 'Cabin', 'Roboto', helvetica, arial, sans-serif;
 }
 
 .fill {
@@ -23,11 +23,9 @@ body {
 }
 
 body .top {
-  position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0;
   overflow-y: auto;
-  border-left: solid 1px #fff;
-  border-right: solid 1px #fff;
+  border-left: solid 1px #5b666d;
+  border-right: solid 1px #5b666d;
 }
 
 .logo {
@@ -35,6 +33,8 @@ body .top {
 }
 
 .logo-icon {
+  position: relative;
+  left: 1px;
   display: inline-block;
   max-height: 34px;
 
