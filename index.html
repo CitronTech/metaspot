@@ -10,24 +10,14 @@
   <link rel="stylesheet" href="/metaspot/resources/linecons.css" type="text/css" />
   <script type="text/javascript" src="https://rawgit.com/CitronTech/metaspot/master/build/metaspot.bundle.js"></script>
   <script src="https://sdk.amazonaws.com/js/aws-sdk-2.3.17.min.js"></script>
-  <script>
-    AWS.config.region = 'us-east-1';
-    AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-      IdentityPoolId: 'us-east-1:4346742a-8a15-4caa-92be-14eb7f5d2995'
-    });
-    
-    AWS.config.credentials.get(function() {
-      var accessKeyId = AWS.config.credentials.accessKeyId;
-      var secretAccessKey = AWS.config.credentials.secretAccessKey;
-      var sessionToken = AWS.config.credentials.sessionToken;
-      
-      console.log(sessionToken);
-    });
-  </script>
 </head>
 <body>
-  <div class="logo">
-    METASP<div class="logo-icon"><div aria-hidden="true" class="li_vynil"></div></div>T
+  <div class="top">
+    <div class="header">
+      <div class="logo">
+        METASP<div class="logo-icon"><div aria-hidden="true" class="li_vynil"></div></div>T
+      </div>    
+    </div>    
   </div>
 </body>
 </html>
