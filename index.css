@@ -3,7 +3,7 @@ html, body {
   margin: 0;
   padding: 0;
   font-size: 12px;
-  font-family: 'Cabin', 'Roboto', helvetica, arial, sans-serif;
+  font-family: 'Roboto', helvetica, arial, sans-serif;
 }
 
 .fill {
@@ -18,12 +18,13 @@ html, body {
 }
 
 body {
- background: #212935; 
+ background: #5b666d;
  color: #FFF;
 }
 
 body .top {
   overflow-y: auto;
+  background: #212935; 
   border-left: solid 1px #5b666d;
   border-right: solid 1px #5b666d;
 }
