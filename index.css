@@ -18,18 +18,22 @@ html, body {
 }
 
 body {
- background: #304358;
+ background: #2D3740; /*#304358;*/
  color: #FFF;
 }
 
 body .top {
   overflow-y: auto;
-  background: #212935; 
+  background: #1F2933; /*#212935;*/
+}
+
+body .top .header {
+  border-bottom: #333;
 }
 
 .logo {
   font-size: 32px;  
-  padding: 8px;
+  padding: 6px 10px;
 }
 
 .logo-icon {
