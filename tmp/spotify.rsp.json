@@ -1,0 +1,308 @@
+var json = {
+  "album_type" : "album",
+  "artists" : [ {
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/artist/3kbBWco9PZ5eSQsNScwG6U"
+    },
+    "href" : "https://api.spotify.com/v1/artists/3kbBWco9PZ5eSQsNScwG6U",
+    "id" : "3kbBWco9PZ5eSQsNScwG6U",
+    "name" : "Built To Spill",
+    "type" : "artist",
+    "uri" : "spotify:artist:3kbBWco9PZ5eSQsNScwG6U"
+  } ],
+  "available_markets" : [ "AR", "BO", "BR", "CL", "CO", "CR", "DO", "EC", "GT", "HK", "HN", "ID", "MX", "MY", "NI", "PA", "PE", "PH", "PY", "SG", "SV", "TR", "TW", "US", "UY" ],
+  "copyrights" : [ {
+    "text" : "1999 Warner Bros. Records Inc. for the U.S. and WEA International Inc. for the world outside of the U.S.",
+    "type" : "C"
+  }, {
+    "text" : "1999 Warner Bros. Records Inc. for the U.S. and WEA International Inc. for the world outside of the U.S.",
+    "type" : "P"
+  } ],
+  "external_ids" : {
+    "upc" : "093624695264"
+  },
+  "external_urls" : {
+    "spotify" : "https://open.spotify.com/album/2PKZhfPrgMmK5zug2pqdHA"
+  },
+  "genres" : [ ],
+  "href" : "https://api.spotify.com/v1/albums/2PKZhfPrgMmK5zug2pqdHA",
+  "id" : "2PKZhfPrgMmK5zug2pqdHA",
+  "images" : [ {
+    "height" : 640,
+    "url" : "https://i.scdn.co/image/1b625a84b31f0823532f71c9ea24bae77ae4553f",
+    "width" : 640
+  }, {
+    "height" : 300,
+    "url" : "https://i.scdn.co/image/1bb9e4cf904dc2304ef3df20b8076ba15f100c38",
+    "width" : 300
+  }, {
+    "height" : 64,
+    "url" : "https://i.scdn.co/image/ba850aecd7f29bb441cb846a91f5097122ce9a1c",
+    "width" : 64
+  } ],
+  "name" : "Keep It Like A Secret",
+  "popularity" : 52,
+  "release_date" : "1999-01-22",
+  "release_date_precision" : "day",
+  "tracks" : {
+    "href" : "https://api.spotify.com/v1/albums/2PKZhfPrgMmK5zug2pqdHA/tracks?offset=0&limit=50",
+    "items" : [ {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/3kbBWco9PZ5eSQsNScwG6U"
+        },
+        "href" : "https://api.spotify.com/v1/artists/3kbBWco9PZ5eSQsNScwG6U",
+        "id" : "3kbBWco9PZ5eSQsNScwG6U",
+        "name" : "Built To Spill",
+        "type" : "artist",
+        "uri" : "spotify:artist:3kbBWco9PZ5eSQsNScwG6U"
+      } ],
+      "available_markets" : [ "AR", "BO", "BR", "CL", "CO", "CR", "DO", "EC", "GT", "HK", "HN", "ID", "MX", "MY", "NI", "PA", "PE", "PH", "PY", "SG", "SV", "TR", "TW", "US", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 209400,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/5nrIEQ6ZmVwt9Pfr3ydvbn"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/5nrIEQ6ZmVwt9Pfr3ydvbn",
+      "id" : "5nrIEQ6ZmVwt9Pfr3ydvbn",
+      "name" : "The Plan",
+      "preview_url" : "https://p.scdn.co/mp3-preview/a8cee3083353c1a23060cf15a962e34015b29455",
+      "track_number" : 1,
+      "type" : "track",
+      "uri" : "spotify:track:5nrIEQ6ZmVwt9Pfr3ydvbn"
+    }, {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/3kbBWco9PZ5eSQsNScwG6U"
+        },
+        "href" : "https://api.spotify.com/v1/artists/3kbBWco9PZ5eSQsNScwG6U",
+        "id" : "3kbBWco9PZ5eSQsNScwG6U",
+        "name" : "Built To Spill",
+        "type" : "artist",
+        "uri" : "spotify:artist:3kbBWco9PZ5eSQsNScwG6U"
+      } ],
+      "available_markets" : [ "AR", "BO", "BR", "CL", "CO", "CR", "DO", "EC", "GT", "HK", "HN", "ID", "MX", "MY", "NI", "PA", "PE", "PH", "PY", "SG", "SV", "TR", "TW", "US", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 163533,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/4lR6ss06VdT8xDlAu2T8VW"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/4lR6ss06VdT8xDlAu2T8VW",
+      "id" : "4lR6ss06VdT8xDlAu2T8VW",
+      "name" : "Center Of The Universe",
+      "preview_url" : "https://p.scdn.co/mp3-preview/79876a6fc6e2abcd6798e5db8f6062734f0daa29",
+      "track_number" : 2,
+      "type" : "track",
+      "uri" : "spotify:track:4lR6ss06VdT8xDlAu2T8VW"
+    }, {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/3kbBWco9PZ5eSQsNScwG6U"
+        },
+        "href" : "https://api.spotify.com/v1/artists/3kbBWco9PZ5eSQsNScwG6U",
+        "id" : "3kbBWco9PZ5eSQsNScwG6U",
+        "name" : "Built To Spill",
+        "type" : "artist",
+        "uri" : "spotify:artist:3kbBWco9PZ5eSQsNScwG6U"
+      } ],
+      "available_markets" : [ "AR", "BO", "BR", "CL", "CO", "CR", "DO", "EC", "GT", "HK", "HN", "ID", "MX", "MY", "NI", "PA", "PE", "PH", "PY", "SG", "SV", "TR", "TW", "US", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 343893,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/3HMOMdRPywfouYx5B4PvaH"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/3HMOMdRPywfouYx5B4PvaH",
+      "id" : "3HMOMdRPywfouYx5B4PvaH",
+      "name" : "Carry The Zero",
+      "preview_url" : "https://p.scdn.co/mp3-preview/87c7273f526b20ef61b13a64b453f5dd5f362ac7",
+      "track_number" : 3,
+      "type" : "track",
+      "uri" : "spotify:track:3HMOMdRPywfouYx5B4PvaH"
+    }, {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/3kbBWco9PZ5eSQsNScwG6U"
+        },
+        "href" : "https://api.spotify.com/v1/artists/3kbBWco9PZ5eSQsNScwG6U",
+        "id" : "3kbBWco9PZ5eSQsNScwG6U",
+        "name" : "Built To Spill",
+        "type" : "artist",
+        "uri" : "spotify:artist:3kbBWco9PZ5eSQsNScwG6U"
+      } ],
+      "available_markets" : [ "AR", "BO", "BR", "CL", "CO", "CR", "DO", "EC", "GT", "HK", "HN", "ID", "MX", "MY", "NI", "PA", "PE", "PH", "PY", "SG", "SV", "TR", "TW", "US", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 231573,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/2WGe9JOnt59reYluiLMLbW"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/2WGe9JOnt59reYluiLMLbW",
+      "id" : "2WGe9JOnt59reYluiLMLbW",
+      "name" : "Sidewalk",
+      "preview_url" : "https://p.scdn.co/mp3-preview/f737a6806f4c9fd3359b4cb2e85e48d80b3912ba",
+      "track_number" : 4,
+      "type" : "track",
+      "uri" : "spotify:track:2WGe9JOnt59reYluiLMLbW"
+    }, {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/3kbBWco9PZ5eSQsNScwG6U"
+        },
+        "href" : "https://api.spotify.com/v1/artists/3kbBWco9PZ5eSQsNScwG6U",
+        "id" : "3kbBWco9PZ5eSQsNScwG6U",
+        "name" : "Built To Spill",
+        "type" : "artist",
+        "uri" : "spotify:artist:3kbBWco9PZ5eSQsNScwG6U"
+      } ],
+      "available_markets" : [ "AR", "BO", "BR", "CL", "CO", "CR", "DO", "EC", "GT", "HK", "HN", "ID", "MX", "MY", "NI", "PA", "PE", "PH", "PY", "SG", "SV", "TR", "TW", "US", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 202106,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/06ZyuKNXTq0MdW91RNY1Ig"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/06ZyuKNXTq0MdW91RNY1Ig",
+      "id" : "06ZyuKNXTq0MdW91RNY1Ig",
+      "name" : "Bad Light",
+      "preview_url" : "https://p.scdn.co/mp3-preview/fdb70563bbba11f90035297a568bf676d3cc0d09",
+      "track_number" : 5,
+      "type" : "track",
+      "uri" : "spotify:track:06ZyuKNXTq0MdW91RNY1Ig"
+    }, {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/3kbBWco9PZ5eSQsNScwG6U"
+        },
+        "href" : "https://api.spotify.com/v1/artists/3kbBWco9PZ5eSQsNScwG6U",
+        "id" : "3kbBWco9PZ5eSQsNScwG6U",
+        "name" : "Built To Spill",
+        "type" : "artist",
+        "uri" : "spotify:artist:3kbBWco9PZ5eSQsNScwG6U"
+      } ],
+      "available_markets" : [ "AR", "BO", "BR", "CL", "CO", "CR", "DO", "EC", "GT", "HK", "HN", "ID", "MX", "MY", "NI", "PA", "PE", "PH", "PY", "SG", "SV", "TR", "TW", "US", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 322400,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/30X2iKHGAgQm2GCBxuoG00"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/30X2iKHGAgQm2GCBxuoG00",
+      "id" : "30X2iKHGAgQm2GCBxuoG00",
+      "name" : "Time Trap",
+      "preview_url" : "https://p.scdn.co/mp3-preview/c8585126943fec1a9f6f28188cfb7b7d0b22844b",
+      "track_number" : 6,
+      "type" : "track",
+      "uri" : "spotify:track:30X2iKHGAgQm2GCBxuoG00"
+    }, {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/3kbBWco9PZ5eSQsNScwG6U"
+        },
+        "href" : "https://api.spotify.com/v1/artists/3kbBWco9PZ5eSQsNScwG6U",
+        "id" : "3kbBWco9PZ5eSQsNScwG6U",
+        "name" : "Built To Spill",
+        "type" : "artist",
+        "uri" : "spotify:artist:3kbBWco9PZ5eSQsNScwG6U"
+      } ],
+      "available_markets" : [ "AR", "BO", "BR", "CL", "CO", "CR", "DO", "EC", "GT", "HK", "HN", "ID", "MX", "MY", "NI", "PA", "PE", "PH", "PY", "SG", "SV", "TR", "TW", "US", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 249253,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/1SqIUmKbeRyHwgp8BOBIRr"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/1SqIUmKbeRyHwgp8BOBIRr",
+      "id" : "1SqIUmKbeRyHwgp8BOBIRr",
+      "name" : "Else",
+      "preview_url" : "https://p.scdn.co/mp3-preview/44cbc297c50a78e7c42922f95c27f9e326d9bde0",
+      "track_number" : 7,
+      "type" : "track",
+      "uri" : "spotify:track:1SqIUmKbeRyHwgp8BOBIRr"
+    }, {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/3kbBWco9PZ5eSQsNScwG6U"
+        },
+        "href" : "https://api.spotify.com/v1/artists/3kbBWco9PZ5eSQsNScwG6U",
+        "id" : "3kbBWco9PZ5eSQsNScwG6U",
+        "name" : "Built To Spill",
+        "type" : "artist",
+        "uri" : "spotify:artist:3kbBWco9PZ5eSQsNScwG6U"
+      } ],
+      "available_markets" : [ "AR", "BO", "BR", "CL", "CO", "CR", "DO", "EC", "GT", "HK", "HN", "ID", "MX", "MY", "NI", "PA", "PE", "PH", "PY", "SG", "SV", "TR", "TW", "US", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 285413,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/1256ozOGDowNo7TNH94xeg"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/1256ozOGDowNo7TNH94xeg",
+      "id" : "1256ozOGDowNo7TNH94xeg",
+      "name" : "You Were Right",
+      "preview_url" : "https://p.scdn.co/mp3-preview/cfa9b41b03153e8e061f2eff02f1d98baa82336f",
+      "track_number" : 8,
+      "type" : "track",
+      "uri" : "spotify:track:1256ozOGDowNo7TNH94xeg"
+    }, {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/3kbBWco9PZ5eSQsNScwG6U"
+        },
+        "href" : "https://api.spotify.com/v1/artists/3kbBWco9PZ5eSQsNScwG6U",
+        "id" : "3kbBWco9PZ5eSQsNScwG6U",
+        "name" : "Built To Spill",
+        "type" : "artist",
+        "uri" : "spotify:artist:3kbBWco9PZ5eSQsNScwG6U"
+      } ],
+      "available_markets" : [ "AR", "BO", "BR", "CL", "CO", "CR", "DO", "EC", "GT", "HK", "HN", "ID", "MX", "MY", "NI", "PA", "PE", "PH", "PY", "SG", "SV", "TR", "TW", "US", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 288280,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/5Q4hsDbyZq7t8Yktlmdjap"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/5Q4hsDbyZq7t8Yktlmdjap",
+      "id" : "5Q4hsDbyZq7t8Yktlmdjap",
+      "name" : "Temporarily Blind",
+      "preview_url" : "https://p.scdn.co/mp3-preview/b0b33e4b71dda049caa6f8aaf1a8796052a9c270",
+      "track_number" : 9,
+      "type" : "track",
+      "uri" : "spotify:track:5Q4hsDbyZq7t8Yktlmdjap"
+    }, {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/3kbBWco9PZ5eSQsNScwG6U"
+        },
+        "href" : "https://api.spotify.com/v1/artists/3kbBWco9PZ5eSQsNScwG6U",
+        "id" : "3kbBWco9PZ5eSQsNScwG6U",
+        "name" : "Built To Spill",
+        "type" : "artist",
+        "uri" : "spotify:artist:3kbBWco9PZ5eSQsNScwG6U"
+      } ],
+      "available_markets" : [ "AR", "BO", "BR", "CL", "CO", "CR", "DO", "EC", "GT", "HK", "HN", "ID", "MX", "MY", "NI", "PA", "PE", "PH", "PY", "SG", "SV", "TR", "TW", "US", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 520640,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/4N0g6GRAFaNJyHGrNy1BFg"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/4N0g6GRAFaNJyHGrNy1BFg",
+      "id" : "4N0g6GRAFaNJyHGrNy1BFg",
+      "name" : "Broken Chairs",
+      "preview_url" : "https://p.scdn.co/mp3-preview/4e72e148815fd49a626edefeb33753625dc617b8",
+      "track_number" : 10,
+      "type" : "track",
+      "uri" : "spotify:track:4N0g6GRAFaNJyHGrNy1BFg"
+    } ],
+    "limit" : 50,
+    "next" : null,
+    "offset" : 0,
+    "previous" : null,
+    "total" : 10
+  },
+  "type" : "album",
+  "uri" : "spotify:album:2PKZhfPrgMmK5zug2pqdHA"
+}
