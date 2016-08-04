@@ -7,7 +7,7 @@ var Cheerio = require('cheerio');
 var docClient = new AWS.DynamoDB.DocumentClient();
 
 var start = 0;
-var page = 68;
+var page = 69;
 
 function yql() {
   var url = {
@@ -183,5 +183,32 @@ function uploadAlbum(context, albums, i, count) {
 }
 
 exports.handler = (event, context, callback) => {
+  var domain = 'http://www.metacritic.com';
+  var path = '/browse/albums/release-date/available/date'
+  var userAgent = 'Mozilla/5.0 (iPad; U; CPU OS 3_2_1 like Mac OS X; en-us)'
+  userAgent += ' AppleWebKit/531.21.10 (KHTML, like Gecko) Mobile/7B405'
+  
+  request({
+    url: domain + path + '?page=' + page,
+    headers: {
+      'User-Agent': userAgent
+    }
+  }, function (err, rsp, body) {
+    if (!err && rsp.statusCode == 200) {
+      var $ = Cheerio.load(body);
 
+      $('div.body_wrap li.release_product').each(function(i, el) {
+        var $el = $(this);
+        var $product_title = $el.find('.product_title > a').eq(0);
+        var name = $product_title.html();
+        name = name.replace(/^\s*/, '').replace(/\s*$/, '');
+        var metaUrl = $product_title.attr('href');
+        var score = $el.find('.metascore_w').html();
+        var artist = $el.find('.product_artist > span:last-child').html();
+        var releaseDate = $el.find('.release_date > span:last-child').html();
+        
+        console.log(name + ': ' + score);
+      })
+    }
+  })
 };

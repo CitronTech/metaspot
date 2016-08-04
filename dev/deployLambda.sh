@@ -1,12 +1,11 @@
 #!/bin/bash
-cd ../js/lambdas/getAlbumDetails
+
+#if [ "$#" = 2 ] && [ "$2" = "--create" ]; then
+#fi
+
+cd $1
 rm lambda.zip
 cd src
 zip -r ../lambda.zip ./*
 cd ..
-
-if [ "$#" = 1 ] && [ "$1" = "--create" ]; then
-    node ./deploy.js --create
-else
-    node ./deploy.js
-fi
+node ./deploy.js $2
