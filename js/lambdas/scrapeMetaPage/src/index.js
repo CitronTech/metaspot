@@ -68,7 +68,7 @@ function uploadAlbum(context, albums, i, count) {
                             parms = {
                                 TableName: "FetchedAlbums",
                                 Item: {
-                                    metaUrl: a.url,
+                                    metaUrl: a.metaUrl,
                                     name: a.name,
                                     score: a.score,
                                     artist: a.artist,
@@ -116,22 +116,25 @@ exports.handler = (event, context, callback) => {
     }
   }, function (err, rsp, body) {
     if (!err && rsp.statusCode == 200) {
-      var $ = Cheerio.load(body);
-
+      var $ = Cheerio.load(body, { decodeEntities: false });
+      var albums = [];
+      
       $('div.body_wrap li.release_product').each(function(i, el) {
         var $el = $(this);
         var album = {};
         var $product_title = $el.find('.product_title > a').eq(0);
         
         album.name = $product_title.html();
-        album.name = name.replace(/^\s*/, '').replace(/\s*$/, '');
+        album.name = album.name.replace(/^\s*/, '').replace(/\s*$/, '');
         album.metaUrl = $product_title.attr('href');
         album.score = $el.find('.metascore_w').html();
         album.artist = $el.find('.product_artist > span:last-child').html();
         album.releaseDate = $el.find('.release_date > span:last-child').html();
-        
-        console.log(album.name + ': ' + album.score);
-      })
+
+        albums.push(album);
+      });
+      
+      uploadAlbum(context, albums, 0, 0);
     }
   })
 };
