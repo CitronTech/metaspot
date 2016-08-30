@@ -4,13 +4,16 @@ var AWS = require('aws-sdk');
 var request = require('request');
 var Cheerio = require('cheerio');
 var docClient = new AWS.DynamoDB.DocumentClient();
-var year = 1999;
 
 exports.handler = (event, context, callback) => {
+  /*
+    Get date keys from Metaspot table.
+      - YXXXX => date keys array i.e. ['0223', '0301', ...]
+  */
   var parms = {
     TableName: 'Metaspot',
     Key: {
-      parmId: 'Y' + year
+      parmId: 'Y' + event.year
     }
   }
   
@@ -18,16 +21,8 @@ exports.handler = (event, context, callback) => {
     if (err) {
       console.log(err);
     } else {
-      /*
-        Get date keys from Metaspot table.
-          - date keys are in MMDD format
-          - use date keys to query FetchedAlbums tables
-      */
       if (data && data.Item && Array.isArray(data.Item.dates)) {
-        /*
-          
-        */
-        var releaseDate = parseInt(year + '' + data.Item.dates[0]);
+        var releaseDate = parseInt(event.year + '' + data.Item.dates[event.dateKeyIndex]);
         
         docClient.query({
           TableName: 'FetchedAlbums',
@@ -71,7 +66,11 @@ exports.handler = (event, context, callback) => {
                     url: 'https://api.spotify.com/v1/search?q="' + encodeURIComponent(name) + '"&type=album'
                   }, function(err, rsp, body) {
                     if (!err && rsp.statusCode == 200) {
-                      console.log(body);
+                      body.albums.items.forEach((a) => {
+                        if (a.album_type == 'album') {
+                          console.log(a.images[1].url);
+                        }
+                      })
                     } else {
                       console.log(rsp.statusCode);
                     }
