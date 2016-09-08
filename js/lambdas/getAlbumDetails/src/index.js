@@ -38,8 +38,8 @@ exports.handler = (event, context, callback) => {
               /*
                 Iterate through albums
               */
-              var url = data.Items[0].metaUrl;
-              var name = data.Items[0].name;
+              var url = data.Items[event.index].metaUrl;
+              var name = data.Items[event.index].name;
               /*
                 Fetch Metacritic album details
               */
@@ -49,15 +49,17 @@ exports.handler = (event, context, callback) => {
                   'User-Agent': 'Mozilla/5.0 (iPad; U; CPU OS 3_2_1 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Mobile/7B405'
                 }
               }, function (err, rsp, body) {
+                var details = {}
+                
                 if (!err && rsp.statusCode == 200) {
                   /*
                     Parse Metacritic response
                   */
                   var $ = Cheerio.load(body);
-                  var genre = $('#main .product_details td').eq(1).html();
-                  genre = genre.replace(/\s+/g, '');
+                  details.genre = $('#main .product_details td').eq(1).html();
+                  details.genre = details.genre.replace(/\s+/g, '');
                   
-                  console.log('Genre: ' + genre);
+                  console.log('Genre: ' + details.genre);
                   
                   /*
                     Fetch Spotify album info if any
@@ -68,7 +70,47 @@ exports.handler = (event, context, callback) => {
                     if (!err && rsp.statusCode == 200) {
                       body.albums.items.forEach((a) => {
                         if (a.album_type == 'album') {
-                          console.log(a.images[1].url);
+                          request({
+                            url: a.images[1].url
+                          }, function (err, rsp, body) {
+                            if (!err && rsp.statusCode == 200) {
+                              details.cover = new Buffer(body).toString('base64');
+                              
+                              request({
+                                url: a.href
+                              }, function(err, rsp, body) {
+                                if (!err && rsp.statusCode == 200) {
+                                  if (Array.isArray(body.tracks)) {
+                                    body.tracks.forEach(function(t) {
+                                      
+                                    });
+                                  }
+                                } else {
+                                  console.log(rsp.statusCode);
+                                }
+                              });
+                              
+                              // docClient.update({
+                              //   TableName: 'FetchedAlbums',
+                              //   Key: {
+                              //     releaseDate: releaseDate,
+                              //     name: name
+                              //   },
+                              //   UpdateExpression: "SET cover = :cover",
+                              //   ExpressionAttributeValues: { 
+                              //     ':cover': details.cover
+                              //   }
+                              // }, function(err, data) {
+                              //   if (err) {
+                              //     console.log(err);
+                              //   } else {
+                                  
+                              //   }
+                              // });
+                            } else {
+                              console.log(rsp.statusCode);
+                            }
+                          });
                         }
                       })
                     } else {
