@@ -1,0 +1,7 @@
+{
+  "name": "dynamo",
+  "version": "0.0",
+  "main": "index.js",
+  "author": "Gerald Truong",
+  "license": "MIT"
+}
