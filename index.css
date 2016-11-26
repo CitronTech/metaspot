@@ -18,24 +18,18 @@ html, body {
 }
 
 body {
- background: #2D3740; /*#304358;*/
+ background: #000; 
  color: #FFF;
  font-size: 22px;
 }
 
 body .top {
   overflow-y: auto;
-  background: #1F2933; /*#212935;*/
 }
 
 body .top .header {
   border-bottom: #333;
 }
-
-.logo1 { font-family: 'Cabin' }
-.logo2 { font-family: 'Roboto' }
-.logo3 { font-family: 'Questrial' }
-.logo4 { font-family: 'Product Sans' }
 
 .logo {
   font-size: 32px;  
