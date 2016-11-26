@@ -31,6 +31,7 @@ body .top {
 body .top .header {
   border-bottom: solid 1px transparent;
   border-image: linear-gradient(90deg,#f7c626 15%,#f68c2f 40%,#e5127d 85%);
+  border-image-slice: 1;
 }
 
 .logo {
