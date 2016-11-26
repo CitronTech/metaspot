@@ -1,0 +1,145 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  font-family: 'Roboto', helvetica, arial, sans-serif;
+}
+
+.fill {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+}
+
+.center {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  margin: auto;
+}
+
+body {
+ background: #2D3740; /*#304358;*/
+ color: #FFF;
+}
+
+body .top {
+  overflow-y: auto;
+  background: #1F2933; /*#212935;*/
+}
+
+body .top .header {
+  border-bottom: #333;
+}
+
+.logo {
+  font-size: 32px;  
+  padding: 6px 10px;
+}
+
+.logo-icon {
+  position: relative;
+  left: 1px;
+  display: inline-block;
+  max-height: 34px;
+
+  -webkit-animation-name: rotate; 
+  -webkit-animation-duration: 5s; 
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  
+  -moz-animation-name: rotate; 
+  -moz-animation-duration: 5s; 
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  
+  -o-animation-name: rotate; 
+  -o-animation-duration: 5s; 
+  -o-animation-iteration-count: infinite;
+  -o-animation-timing-function: linear;
+  
+  animation-name: rotate; 
+  animation-duration: 5s; 
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.logo-icon > div {
+  position: relative;
+  top: 1px;
+}
+
+/*
+  Animations
+  ------------------------------------------------------------------------------
+*/
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to { 
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes rotate {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to { 
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-o-keyframes rotate {
+  from {
+    -o-transform: rotate(0deg);
+  }
+  to { 
+    -o-transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to { 
+    transform: rotate(360deg);
+  }
+}
+
+/*
+  Media queries
+  ------------------------------------------------------------------------------
+*/
+@media (min-width: 1280px) {
+  body .top {
+    width: 960px;
+    margin: auto;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  body .top {
+    width: 960px;
+    margin: auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  body .top {
+    width: 100%;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  body .top {
+    width: 100%;
+  }
+}
+
+@media (max-width: 479px) {
+  body .top {
+    width: 100%;
+  }
+}
