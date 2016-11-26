@@ -4,6 +4,7 @@ html, body {
   padding: 0;
   font-size: 12px;
   font-family: 'Product Sans', helvetica, arial, sans-serif;
+  background: linear-gradient(90deg,#f7c626 15%,#f68c2f 40%,#e5127d 85%);
 }
 
 .fill {
