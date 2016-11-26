@@ -20,6 +20,7 @@ html, body {
 body {
  background: #2D3740; /*#304358;*/
  color: #FFF;
+ font-size: 22px;
 }
 
 body .top {
