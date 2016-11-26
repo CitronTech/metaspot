@@ -34,5 +34,10 @@
   "bugs": {
     "url": "https://github.com/CitronTech/metaspot/issues"
   },
-  "homepage": "https://github.com/CitronTech/metaspot#readme"
+  "homepage": "https://github.com/CitronTech/metaspot#readme",
+  "aws": { 
+    "accessKeyId": "AKIAI4RQ6SUC7TGSYNSQ", 
+    "secretAccessKey": "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",
+    "region": "us-west-2"
+  }
 }
