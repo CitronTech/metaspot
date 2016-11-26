@@ -41,6 +41,7 @@ body .top .header {
   left: 1px;
   display: inline-block;
   max-height: 34px;
+  font-size: 30px;
 
   -webkit-animation-name: rotate; 
   -webkit-animation-duration: 5s; 
