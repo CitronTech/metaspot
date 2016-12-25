@@ -3,8 +3,8 @@
 var cheerio = require('cheerio')
 var utils = require('utils')
 
-module.exports = function(context) {
-  var U = new utils(context)
+module.exports = function(context, callback) {
+  var U = new utils(context, callback)
   
   this.parseDynamoResult = function(name, rsp, parms) {
     var ex, result  = undefined

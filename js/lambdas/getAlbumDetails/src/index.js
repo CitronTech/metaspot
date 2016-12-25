@@ -32,7 +32,7 @@ exports.handler = (event, context, callback) => {
       dateKeyIndex: state.dateKeyIndex
     })
     
-    state.query = M.getQuery('FetchedAlbums', { 
+    state.query = M.getQuery('FetchedAlbums', {
       releaseDate: state.releaseDate
     })
     
@@ -41,12 +41,14 @@ exports.handler = (event, context, callback) => {
     state.album.name = state.data.Items[event.index].name
     state.albumDetailsHtml = yield C.open('http://www.metacritic.com' + state.album.url + '/details')
     state.album.genre = M.parseHtml('getAlbumGenre', state.albumDetailsHtml)
+    
+    callback(null, state.album)
   }
   
   var it = main()
-  var D = new dynamo(context, it)
+  var D = new dynamo(it, context, callback)
   var M = new metaspot(context, callback)
-  var C = new crawler()
+  var C = new crawler(it, context, callback)
   
   it.next()
 }

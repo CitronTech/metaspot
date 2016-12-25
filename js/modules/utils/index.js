@@ -16,7 +16,8 @@ module.exports = function(context, callback) {
       console.log('ERROR arg[', k, ']:', args[k])
     }
     
-    callback();
-    context.done();
+    callback(null, { success: false })
+    
+    context.done()
   }
 }
