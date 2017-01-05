@@ -7,7 +7,7 @@ module.exports = function(main, U) {
   this.open = function (url, cfg) {
     request({
       url: url,
-      json: cfg.json,
+      json: cfg && cfg.json,
       headers: {
         'User-Agent': UA
       }
@@ -16,7 +16,7 @@ module.exports = function(main, U) {
         var result = undefined
         
         try {
-          if (cfg.encodeBase64) {
+          if (cfg && cfg.encodeBase64) {
             result = new Buffer(body).toString('base64')
           } else {
             result = body
