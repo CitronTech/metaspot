@@ -122,24 +122,6 @@ exports.handler = (event, context, callback) => {
                                       console.log(rsp.statusCode);
                                     }
                                   });
-                                  
-                                  // docClient.update({
-                                  //   TableName: 'FetchedAlbums',
-                                  //   Key: {
-                                  //     releaseDate: releaseDate,
-                                  //     name: name
-                                  //   },
-                                  //   UpdateExpression: "SET cover = :cover",
-                                  //   ExpressionAttributeValues: { 
-                                  //     ':cover': details.cover
-                                  //   }
-                                  // }, function(err, data) {
-                                  //   if (err) {
-                                  //     console.log(err);
-                                  //   } else {
-                                      
-                                  //   }
-                                  // });
                                 } else {
                                   console.log(rsp.statusCode);
                                 }

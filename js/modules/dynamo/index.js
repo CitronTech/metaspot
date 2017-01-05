@@ -1,30 +1,21 @@
 'use strict';
 
 var AWS = require('aws-sdk')
-var utils = require('utils')
 
 var docClient = new AWS.DynamoDB.DocumentClient()
 
-module.exports = function(main, context, callback) {
-  var U = new utils(context, callback)
-  
-  this.get = function (query) {
-    docClient.get(query, function(err, data) {
-      if (err) {
-        U.print('dynamo.get', err, { query })
-      } else {
-        main.next(data)
-      }
-    })
-  }
-  
-  this.query = function (query) {
-    docClient.query(query, function(err, data) {
-      if (err) {
-        U.print('dynamo.query', err, { query })
-      } else {
-        main.next(data)
-      }
-    })
+module.exports = function(main, U) {
+  this.run = function(action, query) {
+    if (action == 'get' || action == 'query' || action == 'update') {
+      docClient[action](query || U.value, function(err, data) {
+        if (err) {
+          U.print('dynamo.run', err, { action, query })
+        } else {
+          main.next(data)
+        }
+      })  
+    } else {
+      U.print('dynamo.run' + action, 'unknown action', { action, query })
+    }
   }
 }

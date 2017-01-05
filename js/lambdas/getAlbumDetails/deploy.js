@@ -1,7 +1,7 @@
 var AWS = require('aws-sdk')
 var fs = require('fs')
 
-AWS.config.loadFromPath('../../../aws.config.json')
+AWS.config.loadFromPath('../../../config.json')
 
 var lambda = new AWS.Lambda({apiVersion: '2015-03-31'})
 var parms, fn
@@ -20,7 +20,7 @@ if (process.argv[2] == '--create') {
     Description: 'Gets album cover, genre and tracks',
     MemorySize: 128,
     Publish: false,
-    Timeout: 30
+    Timeout: 60
   };  
   
   fn = 'createFunction'
