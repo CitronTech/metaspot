@@ -19,8 +19,7 @@ exports.handler = (event, context, callback) => {
     genre: null,
     cover: null,
     tracks: null,
-    spotifyInfo: null,
-    spotifyTracksInfo: null
+    spotifyInfo: null
   }
   
   function *main() {
