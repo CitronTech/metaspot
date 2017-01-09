@@ -7,7 +7,7 @@ var utils = require('utils')
 
 exports.handler = (event, context, callback) => {
   var result = undefined
-  var albumDates, counts = { total: 0, valid: 0 }
+  var albumDates, albums = [], counts = { total: 0, valid: 0 }
   
   function *main() {
     if (typeof event.page === 'number') {
@@ -32,8 +32,15 @@ exports.handler = (event, context, callback) => {
             
             U.next(M.getQuery('putFetchedAlbum', { album: a, releaseDate: albumDates.full }))
             U.next(D.run('put', U.value))
+            albums.push(a)
           }
-        })  
+        })
+        
+        result = {
+          success: true,
+          counts,
+          albums
+        }
       } else {
         result = {
           success: false,
