@@ -6,8 +6,8 @@ var docClient = new AWS.DynamoDB.DocumentClient()
 
 module.exports = function(main, U) {
   this.run = function(action, query) {
-    if (action == 'get' || action == 'query' || action == 'update') {
-      docClient[action](query || U.value, function(err, data) {
+    if (action == 'get' || action == 'query' || action == 'put' || action == 'update') {
+      docClient[action](query, function(err, data) {
         if (err) {
           U.print('dynamo.run', err, { action, query })
         } else {

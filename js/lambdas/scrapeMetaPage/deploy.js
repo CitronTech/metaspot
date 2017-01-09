@@ -1,42 +1,42 @@
-var AWS = require('aws-sdk');
-var fs = require('fs');
+var AWS = require('aws-sdk')
+var fs = require('fs')
 
-AWS.config.loadFromPath('../../../config.json');
+AWS.config.loadFromPath('../../../config.json')
 
-var lambda = new AWS.Lambda({apiVersion: '2015-03-31'});
-var parms, lambdaFn;
-var fn = 'scrapeMetaPage';
+var lambda = new AWS.Lambda({apiVersion: '2015-03-31'})
+var parms, fn
+var FN_NAME = 'scrapeMetaPage'
 
 if (process.argv[2] == '--create') {
   parms = {
     Code: {
       ZipFile: fs.readFileSync('./lambda.zip')
     },
-    FunctionName: fn,
+    FunctionName: FN_NAME,
     Handler: 'index.handler',
     Role: 'arn:aws:iam::124672303740:role/lambda_dynamo',
     //Role: 'arn:aws:iam::124672303740:role/lambda_basic_execution',
     Runtime: 'nodejs4.3',
-    Description: '',
+    Description: 'Scrape Metacritic page for albums',
     MemorySize: 128,
     Publish: false,
     Timeout: 30
   };  
   
-  lambdaFn = 'createFunction';
+  fn = 'createFunction'
 } else {
   parms = {
-    FunctionName: fn,
+    FunctionName: FN_NAME,
     ZipFile: fs.readFileSync('./lambda.zip')
   }
   
-  lambdaFn = 'updateFunctionCode';
+  fn = 'updateFunctionCode'
 }
 
-lambda[lambdaFn](parms, function(err, data) {
+lambda[fn](parms, function(err, data) {
   if (err) {
-    console.log(err, err.stack);
+    console.log(err, err.stack)
   } else {
-    console.log(data);
+    console.log(data)
   }
 })

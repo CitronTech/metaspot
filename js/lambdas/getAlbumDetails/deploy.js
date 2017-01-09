@@ -35,8 +35,8 @@ if (process.argv[2] == '--create') {
 
 lambda[fn](parms, function(err, data) {
   if (err) {
-    console.log(err, err.stack);
+    console.log(err, err.stack)
   } else {
-    console.log(data);
+    console.log(data)
   }
 })

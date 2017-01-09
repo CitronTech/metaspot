@@ -35,7 +35,7 @@ exports.handler = (event, context, callback) => {
       
       U.next(yield D.run('get', U.value))
       
-      album.releaseDate = M.parseDynamoResult('Metaspot', U.value, {
+      album.releaseDate = M.parseDynamoResult('MetaspotReleaseDateQuery', U.value, {
         year: event.year,
         dateKeyIndex: event.dateKeyIndex
       })
