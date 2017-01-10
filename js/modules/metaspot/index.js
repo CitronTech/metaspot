@@ -34,7 +34,7 @@ module.exports = function(U) {
           query = {
             TableName: 'Metaspot',
             Key: {
-                parmId: 'Y' + it.date.getFullYear()
+              parmId: 'Y' + it.date.getFullYear()
             }
           }
         }
@@ -81,7 +81,7 @@ module.exports = function(U) {
       }
       
       if (name == 'updateMetaspotLastAlbum') {
-        if (parms.album && parms.releaseDate) {
+        if (parms.name && parms.releaseDate) {
           query = {
             TableName: 'Metaspot',
             Key: {
@@ -89,7 +89,7 @@ module.exports = function(U) {
             },
             UpdateExpression: "SET album = :album",
             ExpressionAttributeValues: {
-              ':album': { name: parms.album.name, releaseDate: parms.releaseDate }
+              ':album': { name: parms.name, releaseDate: parms.releaseDate }
             }
           }
         } 
