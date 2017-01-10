@@ -48,7 +48,6 @@ div {
   left: 1px;
   display: inline-block;
   max-height: 34px;
-  font-size: 30px;
 
   -webkit-animation-name: rotate; 
   -webkit-animation-duration: 5s; 
@@ -69,6 +68,10 @@ div {
   animation-duration: 5s; 
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+}
+
+.logo-icon > div {
+  font-size: 30px;
 }
 
 .logo-icon > div {
