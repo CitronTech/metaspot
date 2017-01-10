@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function(context, callback) {
+module.exports = function(event, context, callback) {
   this.value = undefined
   
   this.next = function(v) {

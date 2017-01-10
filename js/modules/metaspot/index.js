@@ -52,20 +52,14 @@ module.exports = function(U) {
           
           if (it.dates.indexOf(parms.releaseDateMMDD) < 0) {
             it.dates.push(parms.releaseDateMMDD)
-          } else {
-            it.skipUpdate = true
           }
           
-          if (it.skipUpdate) {
-            query = {}
-          } else {
-            query = {
-              TableName: 'Metaspot',
-              Item: {
-                parmId: 'Y' + parms.year,
-                dates: it.dates
-              }
-            }  
+          query = {
+            TableName: 'Metaspot',
+            Item: {
+              parmId: 'Y' + parms.year,
+              dates: it.dates
+            }
           }
         }
       }
@@ -74,6 +68,7 @@ module.exports = function(U) {
         if (parms.album && parms.releaseDate) {
           query = {
             TableName: 'FetchedAlbums',
+            //ConditionExpression: 'attribute_not_exists(name) AND attribute_not_exists(releaseDate)',
             Item: {
               metaUrl: parms.album.metaUrl,
               name: parms.album.name,
@@ -83,6 +78,21 @@ module.exports = function(U) {
             }
           }
         }
+      }
+      
+      if (name == 'updateMetaspotLastAlbum') {
+        if (parms.album && parms.releaseDate) {
+          query = {
+            TableName: 'Metaspot',
+            Key: {
+              parmId: 'lastAlbum',
+            },
+            UpdateExpression: "SET album = :album",
+            ExpressionAttributeValues: {
+              ':album': { name: parms.album.name, releaseDate: parms.releaseDate }
+            }
+          }
+        } 
       }
       
       if (name == 'Metaspot') {
