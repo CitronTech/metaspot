@@ -6,9 +6,10 @@
   "dependencies": {
     "react": "^15.0.2",
     "react-dom": "^15.0.2",
+    "react-redux": "^5.0.1",
     "redux": "^3.5.2"
   },
-  devDependencies: {
+  "devDependencies": {
     "aws-sdk": "^2.4.0",
     "babel-core": "^6.8.0",
     "babel-loader": "^6.2.4",
@@ -21,7 +22,6 @@
     "style-loader": "^0.13.1",
     "webpack": "^1.13.0"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -34,10 +34,5 @@
   "bugs": {
     "url": "https://github.com/CitronTech/metaspot/issues"
   },
-  "homepage": "https://github.com/CitronTech/metaspot#readme",
-  "aws": { 
-    "accessKeyId": "AKIAI4RQ6SUC7TGSYNSQ", 
-    "secretAccessKey": "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",
-    "region": "us-west-2"
-  }
+  "homepage": "https://github.com/CitronTech/metaspot#readme"
 }

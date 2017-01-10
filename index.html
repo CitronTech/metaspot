@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="/metaspot/index.css" type="text/css" />
   <link rel="stylesheet" href="/metaspot/resources/linecons.css" type="text/css" />
   
-  <script type="text/javascript" src="/build/metaspot.bundle.js"></script>
+  <script type="text/javascript" src="/metaspot/build/metaspot.bundle.js"></script>
   <script src="https://sdk.amazonaws.com/js/aws-sdk-2.3.17.min.js"></script>
 </head>
 <body>
@@ -24,5 +24,8 @@
 
     </div>
   </div>
+  <script>
+    metaspot.render(document.querySelector('.body'))
+  </script>
 </body>
 </html>

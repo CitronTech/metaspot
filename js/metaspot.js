@@ -10,7 +10,9 @@ class Metaspot extends React.Component {
   
   render () {
     return (
-      <div>Hello world. I am Metaspot.</div>
+      <div>
+        Hello world. I am Metaspot.
+      </div>
     )
   }
 }
