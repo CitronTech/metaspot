@@ -34,6 +34,10 @@ body .top .header {
   border-image-slice: 1;
 }
 
+div {
+  font-size: 14px;
+}
+
 .logo {
   font-size: 32px;  
   padding: 6px 10px;
