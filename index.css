@@ -71,12 +71,9 @@ div {
 }
 
 .logo-icon > div {
-  font-size: 30px;
-}
-
-.logo-icon > div {
   position: relative;
   top: 1px;
+  font-size: 30px;
 }
 
 /*
