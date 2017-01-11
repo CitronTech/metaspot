@@ -23,12 +23,10 @@ if (typeof window === 'object') {
         console.log('router')
         
         render((
-        <Router history={ browserHistory }>
-          <Route path="/" component={ App }>
-            <Route path="about" component={ About }>
+          <Router history={ browserHistory }>
+            <Route path="/" component={ App }>
             </Route>
-          </Route>
-        </Router>
+          </Router>
         ), it.container)  
       }
     }
