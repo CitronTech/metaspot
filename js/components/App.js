@@ -5,7 +5,10 @@ class App extends React.Component {
     console.log('app render')
     
     return (
-      <div>I am App.</div>
+      <div>
+        <div>I am App.</div>
+        { this.props.children }
+      </div>
     )
   }
 }
