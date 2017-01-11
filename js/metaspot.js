@@ -19,6 +19,7 @@ if (typeof window === 'object') {
     it.render = function (opts) {
       if (opts.container) {
         it.container = opts.container
+        it.browserHistory = browserHistory
         
         render((
           <Router history={ browserHistory }>
