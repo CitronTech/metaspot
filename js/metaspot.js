@@ -21,7 +21,7 @@ if (typeof window === 'object') {
         it.container = opts.container
         render((
         <Router history={ browserHistory }>
-          <Route path="/" component={ App }>
+          <Route path="/metaspot" component={ App }>
             <Route path="about" component={ About }>
             </Route>
           </Route>
