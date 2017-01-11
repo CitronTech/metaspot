@@ -19,9 +19,12 @@ if (typeof window === 'object') {
     it.render = function (opts) {
       if (opts.container) {
         it.container = opts.container
+        
+        console.log('router')
+        
         render((
         <Router history={ browserHistory }>
-          <Route path="/metaspot" component={ App }>
+          <Route path="/" component={ App }>
             <Route path="about" component={ About }>
             </Route>
           </Route>
