@@ -24,7 +24,8 @@ if (typeof window === 'object') {
         render((
           <Router history={ browserHistory }>
             <Route path="/">
-              <Route path="metaspot" component={ App }>
+              <Route path="metaspot">
+                <IndexRoute component={ App } />
                 <Route path="about" component={ About }>
                 </Route>
               </Route>
