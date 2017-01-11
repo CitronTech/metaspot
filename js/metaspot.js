@@ -1,18 +1,18 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { combineReducers, createStore } from 'redux'
+import { Router, Route, Link, browserHistory } from 'react-router'
+import App from './components/App'
+import About from './components/About'
 
 class Metaspot extends React.Component {
-  constructor (props) {
-    super(props)
-    this.state = {}
-  }
-  
   render () {
     return (
-      <div>
-        Hello world. I am Metaspot.
-      </div>
+      <Router history={ browserHistory }>
+        <Route path="/" component={ App }>
+          <Route path="about" component={ About }>
+          </Route>
+        </Route>
+      </Router>
     )
   }
 }
