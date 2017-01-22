@@ -3,7 +3,7 @@ import ReactDOM, { render } from 'react-dom'
 import { Router, Route, Link, IndexRoute, browserHistory } from 'react-router'
 import App from './components/App'
 import About from './components/About'
-import '../styles.less'
+import css from '../styles.less'
 
 if (typeof window === 'object') {
   window.metaspot = new function() {

@@ -32,9 +32,9 @@ module.exports = {
       {
         test: /\.less$/,
         loaders: [
-          'style-loader',
-          { loader: 'css-loader', options: { importLoaders: 1 } },
-          'less-loader'
+          'style',
+          'css',
+          'less'
         ]
         //loader: extractTextPlugin.extract('style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!less-loader')
       },
@@ -43,7 +43,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new extractTextPlugin("./[name].css"),
+    //new extractTextPlugin("./[name].css"),
     new webpack.DefinePlugin({
       'process.env': { 'NODE_ENV': JSON.stringify('production') },
     }),
