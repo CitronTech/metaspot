@@ -2,6 +2,8 @@
 @import "./less/colors";
 @import "./less/common";
 
+@sidebar_width: 280px;
+
 html, body {
   height: 100%;
   margin: 0;
@@ -21,7 +23,7 @@ body {
     .sidebar {
       .filly;
       left: 0;
-      width: 240px;
+      width: @sidebar_width;
       border-right: solid 1px transparent;
       border-image: @border-gradient;
       border-image-slice: 1;
@@ -54,7 +56,7 @@ body {
     
     .body {
       .filly;
-      left: 240px;
+      left: @sidebar_width;
       right: 0;
     }
   }
