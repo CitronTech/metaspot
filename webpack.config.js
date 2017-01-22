@@ -28,9 +28,15 @@ module.exports = {
           presets: ['es2015', 'react']
         }
       },
+      
       {
         test: /\.less$/,
-        loader: extractTextPlugin.extract('style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!less-loader')
+        loaders: [
+          'style-loader',
+          { loader: 'css-loader', options: { importLoaders: 1 } },
+          'less-loader'
+        ]
+        //loader: extractTextPlugin.extract('style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!less-loader')
       },
       { test: /\.css$/, loader: 'style!css' },
       { test: /\.(ttf|woff2|eot|woff|svg|png|gif|jpe?g)$/, loader: 'file-loader' }

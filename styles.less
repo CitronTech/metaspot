@@ -1,0 +1,60 @@
+@import 'less/animations.less';
+@import 'less/common.less';
+@import 'less/media.less';
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: 'Product Sans', helvetica, arial, sans-serif;
+}
+
+body {
+ background: #000; 
+ color: #FFF;
+ 
+ .top {
+    overflow-y: hidden;
+    .fill;
+    
+    .sidebar {
+      .filly;
+      left: 0;
+      width: 240px;
+      border-right: solid 1px transparent;
+      border-image: linear-gradient(90deg,#f7c626 15%,#f68c2f 40%,#e5127d 85%);
+      border-image-slice: 1;
+        
+      .header {
+        border-bottom: solid 1px transparent;
+        border-image: linear-gradient(90deg,#f7c626 15%,#f68c2f 40%,#e5127d 85%);
+        border-image-slice: 1;
+        
+        .logo {
+          font-size: 32px;  
+          padding: 6px 10px;
+          
+          .logo-icon {
+            position: relative;
+            left: 1px;
+            display: inline-block;
+            max-height: 34px;
+            
+            > div {
+              position: relative;
+              top: 1px;
+              font-size: 30px;
+            }
+          }
+        }
+      }      
+    }
+    
+    .body {
+      .filly;
+      left: 240px;
+      right: 0;
+    }
+  }
+}

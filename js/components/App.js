@@ -1,16 +1,34 @@
-import React from 'react'
+import React, { Component, PropTypes } from 'react'
+import { connect } from 'react-redux'
+import * as actions from '../actions'
 
-class App extends React.Component {
-  render () {
-    console.log('app render')
+const mapStateToProps = (state) => {
+  return {
     
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onReady: function () {
+      //dispatch()
+    }
+  }
+}
+
+class App extends Component {
+  render () {
     return (
       <div>
         <div>I am App.</div>
-        { this.props.children }
       </div>
     )
   }
 }
 
-export default App
+const AppContainer = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App)
+
+export default AppContainer

@@ -4,6 +4,7 @@
   "description": "a spotify - metacritic mashup app",
   "main": "/js/metaspot.js",
   "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
     "react": "^15.0.2",
     "react-dom": "^15.0.2",
     "react-redux": "^5.0.1",
@@ -24,6 +25,7 @@
     "webpack": "^1.13.0"
   },
   "scripts": {
+    "build": "webpack --config webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
