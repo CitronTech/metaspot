@@ -23,7 +23,8 @@ module.exports = {
       {
         test: /.js/,
         loader: 'babel-loader',
-        exclude: [/node_modules/, 'js/lambdas/'],
+        // exclude: ['/node_modules/', 'js/lambdas/'],
+        exclude: /node_modules\/(?!(zest)\/).*/,
         query: {
           presets: ['es2015', 'react']
         }
