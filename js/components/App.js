@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import * as actions from '../actions'
 
-import { Panel } from 'zest'
+import Zest, { Panel } from 'zest'
 
 const mapStateToProps = (state) => {
   return {
@@ -20,6 +20,8 @@ const mapDispatchToProps = (dispatch) => {
 
 class App extends Component {
   render () {
+    let Panel = Zest.Panel
+    
     return (
       <div>
         <div>I am App.</div>
