@@ -4,8 +4,10 @@ import { Provider } from 'react-redux'
 import { combineReducers, createStore, applyMiddleware } from 'redux'
 import reducer from './reducer'
 import { Router, Route, Link, IndexRoute, browserHistory } from 'react-router'
+
 import App from './components/App'
 import About from './components/About'
+
 import css from '../styles.less'
 
 export const store = createStore(
