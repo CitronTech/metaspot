@@ -17,8 +17,7 @@ export const store = createStore(
 )
 
 document.addEventListener("DOMContentLoaded", () => {
-  console.log('ok')
-  let container = document.querySelector('.body')
+  let container = document.body
   
   window.metaspot = {
     browserHistory,

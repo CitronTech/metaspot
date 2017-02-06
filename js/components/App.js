@@ -21,9 +21,16 @@ const mapDispatchToProps = (dispatch) => {
 class App extends Component {
   render () {
     return (
-      <div>
-        <div>I am App.</div>
-        <Panel />
+      <div class="top fill">
+        <div class="sidebar">
+          <div class="header">
+            <div class="logo">
+              METASP<div class="logo-icon"><div aria-hidden="true" class="li_vynil"></div></div>T
+            </div>    
+          </div>
+        </div>
+        
+        <div class="body"></div>
       </div>
     )
   }
