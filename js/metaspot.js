@@ -16,29 +16,25 @@ export const store = createStore(
   })
 )
 
-if (typeof window === 'object') {
-  window.metaspot = new function() {
-    let it = this
-    
-    it.render = function (opts) {
-      if (opts.container) {
-        it.container = opts.container
-        it.browserHistory = browserHistory
-        
-        render((
-          <Provider store={ store }>
-            <Router history={ browserHistory }>
-              <Route path="/">
-                <Route path="metaspot">
-                  <IndexRoute component={ App } />
-                  <Route path="about" component={ About }>
-                  </Route>
-                </Route>
-              </Route>
-            </Router>
-          </Provider>
-        ), it.container)  
-      }
-    }
+document.addEventListener("DOMContentLoaded", () => {
+  let container = document.querySelector('.body')
+  
+  window.metaspot = {
+    browserHistory,
+    container
   }
-}
+  
+  render((
+    <Provider store={ store }>
+      <Router history={ browserHistory }>
+        <Route path="/">
+          <Route path="metaspot">
+            <IndexRoute component={ App } />
+            <Route path="about" component={ About }>
+            </Route>
+          </Route>
+        </Route>
+      </Router>
+    </Provider>
+  ), container)  
+})
