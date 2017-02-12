@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import * as actions from '../actions'
 
-import { Panel } from 'zest'
+import { TwoSections } from 'zest'
 
 const mapStateToProps = (state) => {
   return {
@@ -20,18 +20,27 @@ const mapDispatchToProps = (dispatch) => {
 
 class App extends Component {
   render () {
-    return (
-      <div class="top fill">
-        <div class="sidebar">
-          <div class="header">
-            <div class="logo">
-              METASP<div class="logo-icon"><div aria-hidden="true" class="li_vynil"></div></div>T
-            </div>    
+    let header = (
+      <div class="header">
+        <div class="logo">
+          METASP
+          <div class="logo-icon">
+            <div aria-hidden="true" class="li_vynil"></div>
           </div>
-        </div>
-        
-        <div class="body"></div>
+          T
+        </div>    
       </div>
+    )
+    
+    return (
+      <TwoSections>
+        <div class="sidebar">
+          { header }
+        </div>
+        <div class="body">
+        
+        </div>
+      </TwoSections>
     )
   }
 }
