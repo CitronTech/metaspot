@@ -21,11 +21,11 @@ const mapDispatchToProps = (dispatch) => {
 class App extends Component {
   render () {
     let header = (
-      <div class="header">
-        <div class="logo">
+      <div className="header">
+        <div className="logo">
           METASP
-          <div class="logo-icon">
-            <div aria-hidden="true" class="li_vynil"></div>
+          <div className="logo-icon">
+            <div aria-hidden="true" className="li_vynil"></div>
           </div>
           T
         </div>    
@@ -34,10 +34,10 @@ class App extends Component {
     
     return (
       <TwoSections>
-        <div class="sidebar">
+        <div className="sidebar">
           { header }
         </div>
-        <div class="body">
+        <div className="body">
         
         </div>
       </TwoSections>
