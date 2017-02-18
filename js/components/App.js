@@ -38,7 +38,7 @@ class App extends Component {
           { header }
         </div>
         <div className="body">
-        
+          I am the app.
         </div>
       </TwoSections>
     )
