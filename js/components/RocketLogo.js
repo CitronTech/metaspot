@@ -9,7 +9,8 @@ class RocketLogo extends Component {
         	xmlns="http://www.w3.org/2000/svg"
         	x="0px" y="0px"
         	width="40" 
-          height="40">
+          height="40"
+          viewBox="0 0 40 40">
         	
         	<g transform="rotate(-90)">
         		<path style={{ fill: "#91DC5A" }} d="M328.634,76.127c0,0-43.532-7.682-68.284,17.07
