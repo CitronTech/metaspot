@@ -20,7 +20,7 @@ class Logo extends Component {
       		<circle style={{ fill: "#6DA8D6" }} cx="49.397" cy="185.057" r="20"/>
       		<circle style={{ fill: "#F2484B" }} cx="284.949" cy="421.749" r="19.997"/>
       		<circle style={{ fill: "#F2484B" }} cx="98.346" cy="98.543" r="19.997"/>
-      		<g id="lemon" transform="translate(184, 184) scale(0.2)">
+      		<g id="lemon" style={{ transform: "translate(184, 184) scale(0.2)" }}>
       			<path style="#FFD15C" d="M241.371,428.408V300.931c0-10.449-12.539-14.629-18.808-8.359l-89.861,89.861
       				c-4.18,4.18-4.18,12.539,1.045,16.718c27.167,21.943,60.604,35.527,96.131,39.706C235.102,440.947,241.371,434.678,241.371,428.408
       				z"/>
