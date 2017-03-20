@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import * as actions from '../actions'
 
 import { TwoSections } from 'zest'
-import Logo from './Logo'
+import Logo from './RocketLogo'
 
 const mapStateToProps = (state) => {
   return {

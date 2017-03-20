@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 
-class Logo extends Component {
+class AtomLogo extends Component {
   render () {
     return (
       <div>
@@ -59,4 +59,4 @@ class Logo extends Component {
   }
 }
 
-export default Logo
+export default AtomLogo
