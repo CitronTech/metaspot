@@ -26,6 +26,7 @@ class RocketLogo extends Component {
         			s13.432,30,30,30h4.979C49.732,238.371,95.641,270,150,270V60z"/>
         	</g>
         </svg>
+        <div>CitronTech</div>
       </div>
     )
   }
