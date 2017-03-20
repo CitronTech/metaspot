@@ -13,7 +13,7 @@ class RocketLogo extends Component {
             height="40px"
             viewBox="0 0 330 330">
           	
-          	<g  transform="translate(400, 255) rotate(155)">
+          	<g  transform="translate(400, 155) rotate(135)">
           		<path style={{ fill: "#91DC5A" }} d="M328.634,76.127c0,0-43.532-7.682-68.284,17.07
           			c-24.753,24.754-17.072,68.285-17.072,68.285s42.678,8.535,68.284-17.072C337.17,118.805,328.634,76.127,328.634,76.127z"/>
           		<path style={{ fill: "#91DC5A" }} d="M328.634,253.873c0,0-43.532,7.682-68.284-17.07
