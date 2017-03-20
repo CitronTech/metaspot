@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import * as actions from '../actions'
 
 import { TwoSections } from 'zest'
+import Logo from 'Logo'
 
 const mapStateToProps = (state) => {
   return {
@@ -39,6 +40,7 @@ class App extends Component {
         </div>
         <div className="body">
           I am the app.
+          <Logo />
         </div>
       </TwoSections>
     )
