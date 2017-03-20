@@ -38,7 +38,7 @@ class App extends Component {
         <div className="sidebar">
           { header }
         </div>
-        <div className="body">
+        <div className="body" style={{ padding: '20px', background: '#FFF' }}>
           I am the app.
           <Logo />
         </div>
