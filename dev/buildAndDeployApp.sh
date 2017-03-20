@@ -1,5 +1,6 @@
 #!/bin/bash
 
+set NODE_ENV=development
 webpack --config webpack.config.js
 read -p "Continue? " -n 1 -r
 echo

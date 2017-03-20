@@ -8,7 +8,7 @@ class Logo extends Component {
       	version="1.1"
       	x="0px" y="0px" 
       	viewBox="0 0 470 470" 
-      	style="enable-background:new 0 0 470 470;" 
+      	style="enable-background:new 0 0 470 470;"
       	width="512" 
       	height="512">
       
