@@ -1,4 +1,4 @@
-import React, { Component, Proptypes } from 'react'
+import React, { Component, PropTypes } from 'react'
 
 class Logo extends Component {
   render () {
