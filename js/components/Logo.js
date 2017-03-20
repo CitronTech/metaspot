@@ -3,6 +3,7 @@ import React, { Component, PropTypes } from 'react'
 class Logo extends Component {
   render () {
     return (
+      <div>
       <svg 
       	xmlns="http://www.w3.org/2000/svg"
       	version="1.1"
@@ -53,6 +54,7 @@ class Logo extends Component {
       		<circle style="fill:#6DA8D6;" cx="371.654" cy="98.543" r="19.997" />
       	</g>
       </svg>
+      </div>
     )
   }
 }
