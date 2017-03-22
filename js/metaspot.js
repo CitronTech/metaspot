@@ -18,17 +18,30 @@ export const store = createStore(
 
 document.addEventListener("DOMContentLoaded", () => {
   let container = document.body
+  let paths
   
   window.metaspot = {
     browserHistory,
     container
   }
   
+  if (location.href.indexOf('index.html') > -1) {
+    paths = {
+      root: '/citronil/metaspot',
+      app: 'index.html'
+    }  
+  } else {
+    paths = {
+      root: '/',
+      app: 'metaspot'
+    }
+  }
+  
   render((
     <Provider store={ store }>
       <Router history={ browserHistory }>
-        <Route path="/citronil/metaspot">
-          <Route path="index.html">
+        <Route path={ paths.root }>
+          <Route path={ paths.app }>
             <IndexRoute component={ App } />
             <Route path="about" component={ About }>
             </Route>
