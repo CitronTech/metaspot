@@ -27,8 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
   render((
     <Provider store={ store }>
       <Router history={ browserHistory }>
-        <Route path="/">
-          <Route path="metaspot">
+        <Route path="/citronil/metaspot">
+          <Route path="index.html">
             <IndexRoute component={ App } />
             <Route path="about" component={ About }>
             </Route>
